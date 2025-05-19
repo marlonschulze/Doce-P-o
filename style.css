@@ -1,0 +1,791 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+}
+
+
+
+header{
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(to bottom right, #c9864f, #a35c3c);
+  backdrop-filter: blur(5px);
+  top: -5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.title-header{
+  position: relative;
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-left: 20px;
+  top: 20px;
+  color: white;
+}
+
+.menu-container {
+  position: fixed;
+  display: flex;
+  top: 5px;
+  right: 10px;
+}
+
+.hamburger {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+  margin: 20px;
+  z-index: 10;
+}
+
+.hamburger span {
+  background: #333;
+  display: block;
+  height: 3px;
+  margin: 5px 0;
+  transition: 0.4s;
+  border-radius: 2px;
+}
+
+/* Animação para X */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.navbar {
+  display: none;
+  flex-direction: column;
+  background: white;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 10px;
+  z-index: 999;
+}
+
+.navbar ul{
+  display: flex;
+  padding: 0;
+  margin: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.navbar ul li{
+  list-style: none;
+
+}
+.navbar a {
+  text-decoration: none;
+  color: #000000;
+  padding: 10px;
+  transition: background 0.3s;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.navbar a:hover {
+  background-color: #c9864f;
+  border-radius: 5px;
+  
+}
+
+
+.navbar.show {
+  display: flex;
+  z-index: 100;
+}
+
+@media screen and (min-width:768px) {
+  header{
+    height: 100px;
+  }
+
+  .title-header{
+    font-size: 40px;
+    position: relative;
+    top: 30px;
+  }
+
+  .hamburger{
+    display: none;
+  }
+
+  .navbar{
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    box-shadow: none;
+    position: relative;
+    top: 25px;
+  }
+
+  .navbar ul{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .navbar a {
+    position: relative;
+    color: black;
+    font-size: 20px;
+    padding: 5px;
+    font-weight: bold;
+  }
+
+  .navbar a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #000000;
+    transition: width 0.3s ease;
+  }
+
+  .navbar a:hover{
+    background-color: transparent;
+  }
+
+  .navbar a:hover::after{
+    width: 100%;
+    
+  }
+}
+
+/*home*/
+#home{
+  position: relative;
+  background-image: url(/img/fundomobile-docepao.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  width: 100%;
+  height: 850px;
+  margin-top: 76px;
+  border-bottom: 5px solid #c9864f;
+  z-index: 0;
+}
+
+.home-container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  bottom: 200px;
+  text-align: center;
+  
+}
+
+.home-card{
+  width: 70%;
+  height: 100%;
+  padding: 20px;
+  background-color: #c9864f73;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 8px;
+  box-shadow: 6px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.span-docepao{
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 10px;
+  color: white;
+}
+
+.description-home-card{
+   font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  padding: 7px;
+}
+
+.link-home-cardapio{
+  color: #a35c3c;
+  text-decoration: none;
+  background-color: white;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px;
+  margin-bottom: 20px;
+  font-size: 19px;
+  box-shadow: 6px 4px 5px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.link-home-cardapio:hover{
+  transform: translateY(-5px);
+  box-shadow: 6px 8px 12px rgba(0, 0, 0, 0.35);
+  animation: subir 0.5s ease;
+}
+
+@keyframes subir{
+  from{
+    transform: translateY(0);
+  }
+
+  to{
+    transform: translateY(-5px);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #home{
+    background-image: url(/img/fundo-docepao.png);
+    background-size: cover;
+    height: 92vh;
+    width: 100%;
+    margin-top: 58px;
+  }
+
+  .home-container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  top: 1px;
+  text-align: center;
+  
+}
+
+.home-card{
+  width: 80%;
+  height: 400px;
+  background-color: #6844279c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 8px;
+  box-shadow: 6px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.title-home-card{
+  font-size: 30px;
+  position: relative;
+  bottom: 30px;
+}
+
+.span-docepao{
+  font-size: 30px;
+}
+
+.description-home-card{
+   font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 27px;
+  padding: 7px;
+}
+
+.link-home-cardapio{
+ font-size: 23px;
+ position: relative;
+ top: 25px;
+}
+}
+
+
+/*about*/
+#about{
+  background-image: url(/img/fundo-aboutmobile-docepao.png);
+  background-size: cover;
+  height: 800px;
+  scroll-margin-top: 80px;
+  border-bottom: 5px solid #c9864f;
+}
+
+.about-card{
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  top: 80px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5); 
+  
+}
+
+.title-about{
+  font-size: 27px;
+  padding-bottom: 20px;
+}
+
+.description-about{
+  font-size: 19px;
+  letter-spacing: 2;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media screen and (min-width: 768px){
+  #about{
+    background-image: url(/img/fundo-about-docepao.png);
+    background-size: 1690px 800px;
+    background-repeat: no-repeat;
+    
+  }
+
+  .about-card{
+    width:600px;
+    height: 600px;
+    background-color: transparent;
+    position: relative;
+    left: 850px;
+  }
+
+  .title-about{
+    font-size: 36px;
+  }
+
+  .description-about{
+    font-size: 25px;
+    line-height: 1.2;
+  }
+}
+
+/*cardapio*/
+#cardapio{
+  padding: 20px;
+  background-color: #f8f8f8;
+  min-height: 170px;
+    
+}
+
+.title-cardapio{
+  font-size: 27px;
+  text-align: center;
+  color: #a35c3c;
+}
+
+.nav-cardapio{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: transparent;
+  box-shadow: none;
+  position: relative;
+  top: 25px;
+  border-radius: 8px;
+}
+
+.nav-cardapio ul{
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.nav-cardapio ul li{
+  list-style: none;
+}
+
+.nav-cardapio a {
+  position: relative;
+  color: black;
+  font-size: 20px;
+  padding: 9px;
+  font-weight: bold;
+  text-decoration: none;
+  
+}
+
+.nav-cardapio a:hover{
+  color: #c9864f;
+}
+
+
+/*somente a nav*/
+@media screen and (min-width: 768px){
+  .title-cardapio{
+    font-size: 34px;
+    margin-top: 30px;
+  }
+
+  .nav-cardapio{
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    box-shadow: none;
+    position: relative;
+    top: 25px;
+  }
+
+  .nav-cardapio ul{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .nav-cardapio a {
+    position: relative;
+    color: black;
+    font-size: 30px;
+    padding: 45px;
+    font-weight: bold;
+  }
+
+  .nav-cardapio a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 30px;
+    width: 0%;
+    height: 2px;
+    background-color: #a35c3c;
+    transition: width 0.3s ease;
+  }
+
+  .nav-cardapio a:hover{
+    background-color: transparent;
+  }
+
+  .nav-cardapio a:hover::after{
+    width: 100%;
+    
+  }
+}
+
+
+/*mostra a pag selecionada no cardapio*/
+.produtos{
+  display: none;
+  margin-top: 80px;
+  scroll-margin-top: 250px;
+}
+
+.produtos:target{
+  display: block;
+}
+
+/*salgados*/
+.title-produto-cardapio{
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #a35c3c;
+
+}
+
+.container-produtos{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.card-produto-cardapio{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 8px;
+  border: 3px solid #c9864f;
+}
+
+.img-produto-cardapio{
+  border-radius: 8px;
+}
+
+.name-produto-cardapio{
+  font-size: 17px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+}
+
+@media screen and (min-width: 768px){
+  .title-produto-cardapio{
+    font-size: 40px;
+  }
+
+  .container-produtos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .card-produto-cardapio{
+    width: 300px;
+  }
+
+  .name-produto-cardapio{
+    font-size: 23px;
+    margin-top: 4px;
+  }
+
+  .preco-produto-cardapio{
+    font-size: 20px;
+  }
+}
+
+/*depoimentos*/
+#depoimentos{
+  background-image: url(img/fundomobile-depoimentos-docepao.png);
+  background-size: cover;
+  padding: 30px;
+  text-align: center;
+  border-top: 5px solid #c9864f;
+  border-bottom: 5px solid #c9864f;
+  scroll-margin-top: 100px;
+}
+
+.img-left-desktop{
+  display: none;
+}
+
+.title-depoimentos{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.container-depoimentos{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.card-depoimento{
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 7px 8px rgba(0, 0, 0, 0.6);
+}
+
+.name-depoimento{
+  font-size: 18px;
+}
+
+.text-depoimento{
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media screen and (min-width: 768px){
+  #depoimentos{
+    background-image: none;
+    background-color: #f4f4f4;
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 30px;
+    scroll-margin-top: 100px;
+  } 
+
+  .img-left-desktop{
+    display: block;
+    padding: 0;
+  }
+
+  .title-depoimentos{
+    font-size: 33px;
+    color: #a35c3c;
+    
+  }
+
+  .card-depoimento{
+    width: 500px;
+    max-height: 150px;
+  }
+
+  .name-depoimento{
+    font-size: 22px;
+  }
+
+  .text-depoimento{
+    font-size: 18px;
+  }
+}
+
+/*blog*/
+#blog{
+  background: linear-gradient(to bottom right, #c9864f, #a35c3c);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-bottom: 5px solid #c9864f;
+  scroll-margin-top: 120px;
+}
+
+.container-card-blog{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  justify-content: center;
+}
+
+.title-blog{
+  color: white;
+  font-size: 23px;
+  margin-bottom: -20px;
+}
+
+.description-blog{
+  color: white;
+  font-size: 19px;
+}
+
+.card-blog{
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fffefc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.card-blog:hover{
+  transform: scale(1.02);
+}
+
+.link-blogs{
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.img-card-blog{
+  width: 100%;
+  max-height: 100px;
+  object-fit: cover;
+}
+
+.title-card-blog{
+  font-size: 20px;
+  color: #a35c3c;
+}
+
+.text-card-blog{
+  font-size: 17px;
+  padding: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media screen and (min-width: 768px){
+  .title-blog{
+    font-size: 30px;
+  }
+
+  .description-blog{
+    font-size: 23px;
+  }
+
+  .container-card-blog{
+    flex-direction: row;
+  }
+
+  .card-blog{
+    width: 600px;
+    height: 400px;
+  }
+
+  .img-card-blog{
+    max-height: 170px;
+  }
+
+  .title-card-blog{
+    font-size: 28px;
+  }
+
+  .text-card-blog{
+    font-size: 24px;
+  }
+}
+
+/*contatos*/
+.contatos{
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.title-contatos{
+  font-size: 25px;
+}
+
+.text-contatos{
+  font-size: 19px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.container-infos{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 0 auto;
+}
+
+.info{
+  flex: 1;
+  text-align: left;
+}
+
+.info p{
+  margin-bottom: 10px;
+  font-size: 19px;
+}
