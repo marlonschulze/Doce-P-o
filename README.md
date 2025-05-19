@@ -11,6 +11,7 @@ Este repositório contém o código-fonte de um site fictício criado para a pad
 - Informações que poderiam identificar pessoas foram **omitidas ou censuradas** propositalmente.
 - Todas as **imagens** foram retiradas do **Canva Gratuito** e estão em conformidade com os termos de uso da plataforma.
 
+
 ---
 
 ## 🌐 Tecnologias Utilizadas
@@ -21,6 +22,8 @@ Este repositório contém o código-fonte de um site fictício criado para a pad
 - Visual Studio Code
 
 ---
+
+--ESTE SITE AINDA ESTÁ EM ANDAMENTO--
 
 ## 🚀 Como Visualizar
 
