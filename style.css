@@ -273,7 +273,7 @@ header{
 
 @media screen and (min-width: 768px) {
   #home{
-    background-image: url(/img/fundo-docepao.png);
+    background-image: url(img/fundo-home-docepao.png);
     background-size: cover;
     height: 92vh;
     width: 100%;
