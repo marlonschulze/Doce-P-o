@@ -184,7 +184,7 @@ header{
 /*home*/
 #home{
   position: relative;
-  background-image: url(/img/fundomobile-docepao.png);
+  background-image: url(img/fundomobile-home-docepao.png);
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
@@ -330,7 +330,7 @@ header{
 
 /*about*/
 #about{
-  background-image: url(https://raw.githubusercontent.com/marlonschulze/Doce-P-o/refs/heads/main/img/fundo-aboutmobile-docepao.png);
+  background-image: url(img/fundomobile-about-docepao.png);
   background-size: cover;
   height: 800px;
   scroll-margin-top: 80px;
@@ -368,7 +368,7 @@ header{
 
 @media screen and (min-width: 768px){
   #about{
-    background-image: url(/img/fundo-about-docepao.png);
+    background-image: url(img/fundo-about-docepao.png);
     background-size: 1690px 800px;
     background-repeat: no-repeat;
     
