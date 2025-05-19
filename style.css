@@ -330,7 +330,7 @@ header{
 
 /*about*/
 #about{
-  background-image: url(/img/fundo-aboutmobile-docepao.png);
+  background-image: url(https://raw.githubusercontent.com/marlonschulze/Doce-P-o/refs/heads/main/img/fundo-aboutmobile-docepao.png);
   background-size: cover;
   height: 800px;
   scroll-margin-top: 80px;
