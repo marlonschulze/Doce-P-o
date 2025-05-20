@@ -508,7 +508,7 @@ header{
   display: block;
 }
 
-/*salgados*/
+/*produtos*/
 .title-produto-cardapio{
   font-size: 30px;
   text-align: center;
@@ -532,7 +532,7 @@ header{
 }
 
 .img-produto-cardapio{
-  border-radius: 8px;
+  border-radius: 6px;
 }
 
 .name-produto-cardapio{
