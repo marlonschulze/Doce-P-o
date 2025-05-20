@@ -370,9 +370,9 @@ header{
 @media screen and (min-width: 768px){
   #about{
     background-image: url(img/fundo-about-docepao.png);
-    background-size: 1690px 800px;
     background-repeat: no-repeat;
-    
+    background-position: center;
+    background-size: cover;
   }
 
   .about-card{
