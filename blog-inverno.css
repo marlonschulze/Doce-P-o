@@ -1,0 +1,28 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #f7f7f7;
+  font-family: Arial, sans-serif;
+}
+
+header{
+  position: absolute;
+  width: 100%;
+  height: 90px;
+  background: linear-gradient(to bottom right, #c9864f, #a35c3c);
+  backdrop-filter: blur(5px);
+  top: -5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;  
+}
+
+.title-header{
+  justify-content: center;
+  align-items: center;
+}
