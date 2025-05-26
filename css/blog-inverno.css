@@ -39,12 +39,24 @@ header{
   font-size: 30px;
 }
 
-#blog-cards{
+main{
   margin-top: 85px;
   background: linear-gradient(to bottom right, #c9864f, #a35c3c);
+}
+
+.title-main{
+  position: relative;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  top: 20px;
+  font-size: 35px;
+}
+
+.container-cards{
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 28px;
   text-align: center;
   justify-content: center;
   padding: 20px 20px;
@@ -103,18 +115,55 @@ header{
   background-color: #a35c3c;
 }
 
+@media (min-width: 768px){
+  .title-main{
+    font-size: 40px;
+  }
+
+  .container-cards{
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .card{
+    width: 700px;
+  }
+
+  .img-card-blog{
+    width: auto;
+    height: 200px;
+    object-fit: cover;
+    object-position: 50% 20%;
+  }
+
+  .title-card-blog{
+    font-size: 32px;
+  }
+
+  .text-card-blog{
+    font-size: 19px;
+  }
+
+  .link-card-blog{
+    font-size: 20px;
+  }
+}
+
 /*dicas*/
 .dicas{
   display: flex;
   flex-direction: column;
   gap: 15px;
   text-align: center;
+  align-items: center;
 }
 
 .title-dicas{
   color: white;
   font-size: 30px;
   margin-top: 70px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .span-docepao{
@@ -154,4 +203,29 @@ span{
   font-style: normal;
 
   margin-top: 15px;
+}
+
+@media screen and (min-width: 768px){
+  .dicas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .title-dicas{
+    font-size: 35px;
+  }
+
+  .dica-card{
+    width: 500px;
+    height: 300px;
+  }
+
+  .title-dica{
+    font-size: 25px;
+  }
+
+  .text-dica{
+    font-size: 18px;
+  }
 }
