@@ -154,6 +154,8 @@ main{
   display: flex;
   flex-direction: column;
   gap: 15px;
+  padding: 20px;
+  border-bottom: 5px solid #c9864f;
   text-align: center;
   align-items: center;
 }
@@ -209,24 +211,24 @@ span{
   .dicas{
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
 
-  .title-dicas{
-    font-size: 35px;
   }
 
   .dica-card{
-    width: 700%;
+    flex: 1 1 calc(50% - 20px);
+    max-width: 700px;
     height: 300px;
   }
 
+  span{
+    font-size: 30px;
+  }
+
   .title-dica{
-    font-size: 25px;
+    font-size: 28px;
   }
 
   .text-dica{
-    font-size: 18px;
+    font-size: 23px;
   }
 }
