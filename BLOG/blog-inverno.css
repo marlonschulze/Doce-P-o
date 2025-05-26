@@ -68,7 +68,6 @@ main{
   flex-direction: column;
   text-align: center;
   justify-content: center;
-
   width: 300px;
   border-radius: 10px;
   overflow: hidden;
@@ -123,17 +122,19 @@ main{
   .container-cards{
     flex-direction: row;
     align-items: flex-start;
+
   }
 
   .card{
-    width: 700px;
+    width: 600px;
+    height: 400px;
   }
 
   .img-card-blog{
     width: auto;
     height: 200px;
     object-fit: cover;
-    object-position: 50% 20%;
+    object-position: 50% 10%;
   }
 
   .title-card-blog{
@@ -184,6 +185,7 @@ main{
   padding: 20px 15px;
   border-radius: 10px;
   border-left: 15px solid #c9864f94;
+  border-right: 15px solid #c9864f94;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
@@ -208,6 +210,14 @@ span{
 }
 
 @media screen and (min-width: 768px){
+  .title-dicas{
+    font-size: 33px;
+  }
+
+  .span-docepao{
+    font-size: 35px;
+  }
+
   .dicas{
     flex-direction: row;
     flex-wrap: wrap;
@@ -216,19 +226,19 @@ span{
 
   .dica-card{
     flex: 1 1 calc(50% - 20px);
-    max-width: 700px;
+    max-width: 500px;
     height: 300px;
   }
 
   span{
-    font-size: 30px;
+    font-size: 27px;
   }
 
   .title-dica{
-    font-size: 28px;
+    font-size: 25px;
   }
 
   .text-dica{
-    font-size: 23px;
+    font-size: 21px;
   }
 }
