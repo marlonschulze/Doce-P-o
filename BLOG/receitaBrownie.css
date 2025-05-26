@@ -234,6 +234,27 @@ ol.order li::before {
     background-color: #c9864f;
   }
 
+
+  /*scroll ingredientes*/
+  .ingredientes::-webkit-scrollbar{
+    width: 8px;
+  }
+
+  .ingredientes::-webkit-scrollbar-track{
+    background-color: #a35d3c6b;
+    border-radius: 10px;
+  }
+
+  .ingredientes::-webkit-scrollbar-thumb{
+    color: #c9864f;
+    border-radius: 10px;
+    border: 2px solid white;
+  }
+
+  .ingredientes::-webkit-scrollbar-thumb:hover{
+    background-color: #c9864f;
+  }
+
   .title-ingredientes{
     font-size: 28px;
   }
