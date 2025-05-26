@@ -1,0 +1,196 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #f7f7f7;
+  font-family: Arial, sans-serif;
+}
+
+header{
+  position: absolute;
+  width: 100%;
+  height: 90px;
+  background: linear-gradient(to bottom right, #c9864f, #a35c3c);
+  backdrop-filter: blur(5px);
+  top: -5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: flex;
+}
+
+.title-header{
+  position: relative;
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  top: 20px;
+  margin-left: 20px;
+  color: white;
+  font-size: 35px;
+}
+
+
+/*main*/
+
+main{
+  margin-top: 85px;
+  background: linear-gradient(to bottom right, #c9864f, #a35c3c);
+}
+
+.descriçao{
+  width: 100%;
+  border-bottom: 5px solid #c9864f;
+}
+
+.title-descriçao{
+  position: relative;
+  margin-top: 10px;
+  text-align: center;
+  top: 20px;
+  font-size: 28px;
+  color: white;
+  font-family: "Ancizar Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.text-descriçao{
+  text-align: center;
+  color: white;
+  margin-top: 30px;
+  font-size: 17px;
+   font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  margin: 20px;
+}
+
+/*ingredientes*/
+.ingredientes{
+  border-bottom: 5px solid #c9864f;
+}
+
+.ingredientes-container{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title-ingredientes{
+  color: white;
+  font-family: "Ancizar Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.subtitle-ingredientes{
+  color: white;
+  margin-top: 20px;
+  font-size: 17px;
+}
+
+ul{
+  margin-top: 15px;
+  color: #111;
+  max-width: 250px;
+  line-height: 20px;
+   font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+ul li{
+  list-style: none;
+}
+
+/*modo de preparo*/
+.preparo{
+  width: 100%;
+  border-bottom: 5px solid #c9864f;
+}
+
+.preparo-container{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title-preparo{
+  color: white;
+  font-family: "Ancizar Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.text-preparo{
+  color: white;
+   font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 10px;
+}
+
+span{
+  font-size: 15px;
+}
+
+.subtitle-preparo{
+  color: white;
+  margin-top: 20px;
+  font-size: 17px;
+}
+
+ol{
+  margin-left: 20px;
+  margin-top: 15px;
+  color: #111;
+  max-width: 250px;
+  line-height: 1.3;
+   font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*teste*/
+ol.order {
+  counter-reset: passo;
+  padding-left: 0;
+}
+
+ol.order li {
+  list-style: none;
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 20px;
+}
+
+ol.order li::before {
+  counter-increment: passo;
+  content: counter(passo);
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #a35c3c94;
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 20px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+}
+
+@media screen and (min-width: 768px){
+  
+}

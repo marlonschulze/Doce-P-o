@@ -33,11 +33,6 @@ header{
 }
 
 /*main*/
-.title-main{
-  color: white;
-  font-family: Arial, sans-serif;
-  font-size: 30px;
-}
 
 main{
   margin-top: 85px;
@@ -46,10 +41,11 @@ main{
 
 .title-main{
   position: relative;
-  color: rgb(255, 255, 255);
   text-align: center;
   top: 20px;
   font-size: 35px;
+  color: white;
+  font-family: Arial, sans-serif;
 }
 
 .container-cards{
