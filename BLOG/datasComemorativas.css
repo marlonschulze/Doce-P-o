@@ -1,0 +1,239 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #f7f7f7;
+  font-family: Arial, sans-serif;
+}
+
+header{
+  position: absolute;
+  width: 100%;
+  height: 90px;
+  background: linear-gradient(to bottom right, #c9864f, #a35c3c);
+  backdrop-filter: blur(5px);
+  top: -5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: flex;
+}
+
+.title-header{
+  position: relative;
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  top: 20px;
+  margin-left: 20px;
+  color: white;
+  font-size: 35px;
+}
+
+/*main*/
+
+main{
+  margin-top: 85px;
+  background: linear-gradient(to bottom right, #c9864f, #a35c3c);
+}
+
+.title-main{
+  position: relative;
+  text-align: center;
+  top: 20px;
+  font-size: 35px;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.container-cards{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  text-align: center;
+  justify-content: center;
+  padding: 20px 20px;
+  border-bottom: 5px solid #c9864f;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fffefc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.card:hover{
+  transform: scale(1.02);
+}
+
+.title-card-blog{
+  color: #a35c3c;
+  margin-top: 15px;
+  font-size: 21px;
+}
+
+.text-card-blog{
+  color: black;
+   font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 15px;
+  font-size: 17px;
+}
+
+.link-card-blog{
+  display: block;
+  text-align: center;
+  margin: 15px auto;
+  padding: 10px 5px;
+  text-decoration: none;
+  width: 50%;
+  background-color: #c9864f;
+  border-radius: 5px;
+  color: white;
+}
+
+.link-card-blog:hover{
+  background-color: #a35c3c;
+}
+
+@media (min-width: 768px){
+  .title-main{
+    font-size: 40px;
+  }
+
+  .container-cards{
+    flex-direction: row;
+    align-items: flex-start;
+
+  }
+
+  .card{
+    width: 600px;
+    height: 400px;
+  }
+
+  .img-card-blog{
+    width: auto;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .title-card-blog{
+    font-size: 32px;
+  }
+
+  .text-card-blog{
+    font-size: 19px;
+  }
+
+  .link-card-blog{
+    font-size: 20px;
+  }
+}
+
+/*dicas*/
+.dicas{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  border-bottom: 5px solid #c9864f;
+  text-align: center;
+  align-items: center;
+}
+
+.title-dicas{
+  color: white;
+  font-size: 30px;
+  margin-top: 70px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.span-docepao{
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 35px;
+}
+
+.dica-card{
+  background-color: #fffefc94;
+  max-width: 360px;
+  display: block;
+  text-align: center;
+  margin: 15px auto;
+  padding: 20px 15px;
+  border-radius: 10px;
+  border-left: 15px solid #c9864f94;
+  border-right: 15px solid #c9864f94;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+span{
+  font-size: 24px;
+}
+
+.title-dica{
+  font-size: 22px;
+  color: #a35c3c;
+  margin-top: 9px;
+  font-weight: bold;
+}
+
+.text-dica{
+   font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
+  margin-top: 15px;
+}
+
+@media screen and (min-width: 768px){
+  .title-dicas{
+    font-size: 33px;
+  }
+
+  .span-docepao{
+    font-size: 35px;
+  }
+
+  .dicas{
+    flex-direction: row;
+    flex-wrap: wrap;
+
+  }
+
+  .dica-card{
+    flex: 1 1 calc(50% - 20px);
+    max-width: 500px;
+    height: 300px;
+  }
+
+  span{
+    font-size: 27px;
+  }
+
+  .title-dica{
+    font-size: 25px;
+  }
+
+  .text-dica{
+    font-size: 21px;
+  }
+}
